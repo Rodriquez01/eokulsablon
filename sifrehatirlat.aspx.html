@@ -1,0 +1,403 @@
+
+<!doctype html>
+<HTML>
+	<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<title>Mebbis Şifre Hatırlatma</title>
+		<!--<base target="_self">--> <!-- unutma bu postback ile alakalı-->
+		<meta content="Microsoft Visual Studio 7.0" name="GENERATOR">
+		<meta content="C#" name="CODE_LANGUAGE">
+		<meta content="JavaScript" name="vs_defaultClientScript">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		<LINK href="Styles/style.css" type="text/css" rel="stylesheet">
+        <script type="text/javascript">
+            function tarihkontrol(DateField) {
+                var checkstr = "0123456789/";
+                var DateValue = DateField.value;
+                var DateTemp = "";
+
+                /* Delete all chars except 0..9 */
+                for (i = 0; i < DateValue.length; i++) {
+                    if (checkstr.indexOf(DateValue.substr(i, 1)) >= 0) {
+                        DateTemp = DateTemp + DateValue.substr(i, 1);
+                    }
+                }
+
+                if (DateTemp.length == 1) {
+                    if (DateTemp.substr(0, 1) == "/") {
+                        DateTemp = "01/";
+                    }
+                }
+
+                if (DateTemp.length == 2) {
+                    if (DateTemp.substr(1, 1) == "/") {
+                        DateTemp = "0" + DateTemp.substr(0, 1) + "/";
+                    }
+
+                }
+
+                if (DateTemp.length == 3) {
+                    if (DateTemp.substr(2, 1) != "/") {
+                        DateTemp = DateTemp.substr(0, 2) + "/" + DateTemp.substr(2, 1);
+                    }
+                }
+
+                if (DateTemp.length == 4) {
+                    if (DateTemp.substr(3, 1) == "/") {
+                        DateTemp = DateTemp.substr(0, 3);
+                    }
+
+                }
+
+                if (DateTemp.length == 5) {
+                    if (DateTemp.substr(4, 1) == "/") {
+                        DateTemp = DateTemp.substr(0, 3) + "0" + DateTemp.substr(3, 2);
+                    }
+
+                }
+
+                if (DateTemp.length == 6) {
+                    if (DateTemp.substr(5, 1) != "/") {
+                        DateTemp = DateTemp.substr(0, 5) + "/" + DateTemp.substr(5, 1);
+                    }
+
+                }
+
+                if (DateTemp.length > 10) {
+                    DateTemp = DateTemp.substr(0, 10);
+                    if (DateTemp.indexOf('/') < 2)
+                        DateTemp = '';
+                }
+
+
+                DateField.value = DateTemp;
+                return true;
+
+            }
+        </script>
+
+	    <style type="text/css">.auto-style1 {
+                height: 37px;
+            }
+            .auto-style2 {
+                width: 222px;
+            }
+            .auto-style4 {
+                height: 14px;
+                width: 222px;
+            }
+            .auto-style5 {
+                height: 37px;
+                width: 134px;
+            }
+            .auto-style6 {
+                height: 37px;
+                width: 222px;
+            }
+            .auto-style9 {
+                height: 14px;
+                width: 16px;
+            }
+            .auto-style13 {
+                width: 16px;
+            }
+            .auto-style14 {
+                height: 37px;
+                width: 1px;
+            }
+            .auto-style16 {
+                height: 37px;
+                width: 16px;
+            }
+            .auto-style17 {
+                height: 37px;
+                width: 774px;
+            }
+            .auto-style18 {
+                width: 774px;
+            }
+            .auto-style19 {
+                height: 14px;
+                width: 774px;
+            }
+            .auto-style20 {
+                width: 15px;
+            }
+            .auto-style23 {
+                height: 22px;
+            }
+            .auto-style26 {
+                width: 193px;
+            }
+            .auto-style27 {
+                color: #006600;
+            }
+            .auto-style28 {
+                height: 829px;
+            }
+            .auto-style33 {
+                height: 1px;
+            }
+            .auto-style34 {
+                height: 1px;
+                width: 16px;
+            }
+            .auto-style35 {
+                height: 1px;
+                width: 222px;
+            }
+            .auto-style36 {
+                height: 1px;
+                width: 774px;
+            }
+            </style>
+	</HEAD>
+	<body bottomMargin="0" leftMargin="0" topMargin="0" rightMargin="0">
+		<table height="100%" cellSpacing="0" cellPadding="0" width="100%" border="0">
+			<tr>
+				<td vAlign="top" width="100%">
+					<table id="Table2" cellSpacing="0" cellPadding="0" width="100%" border="0">
+						<tr>
+							<td vAlign="top" align="left" width="130"></td>
+							<td vAlign="top" align="left" width="100%">
+								<form method="post" action="sifrehatirlat.aspx.html" id="frmNoname">
+<input type="hidden" name="__VIEWSTATEFIELDCOUNT" id="__VIEWSTATEFIELDCOUNT" value="10" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEyNjQyMjc0" />
+<input type="hidden" name="__VIEWSTATE1" id="__VIEWSTATE1" value="MDAPZBYCAgEPZBYCAgkP" />
+<input type="hidden" name="__VIEWSTATE2" id="__VIEWSTATE2" value="ZBYEZg9kFgICAw9kFgIC" />
+<input type="hidden" name="__VIEWSTATE3" id="__VIEWSTATE3" value="AQ8PFgIeBFRleHRlZGQC" />
+<input type="hidden" name="__VIEWSTATE4" id="__VIEWSTATE4" value="AQ9kFgICAw9kFgICAQ8P" />
+<input type="hidden" name="__VIEWSTATE5" id="__VIEWSTATE5" value="FgIeCEltYWdlVXJsBRZn" />
+<input type="hidden" name="__VIEWSTATE6" id="__VIEWSTATE6" value="dXZlbmxpa2tvZC5hc3B4" />
+<input type="hidden" name="__VIEWSTATE7" id="__VIEWSTATE7" value="P2lkPTM1ZGRka2sGDfpJ" />
+<input type="hidden" name="__VIEWSTATE8" id="__VIEWSTATE8" value="jKkIQRqIxFiiPrwEkFbz" />
+<input type="hidden" name="__VIEWSTATE9" id="__VIEWSTATE9" value="K7fFavxb5ZUCWaQ=" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="65E0A90F" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAr+7iwnEYwACtn26XGyPHHeC0il8W41PQq6fEZHvxKrRXgjhSuy51K80eHzn5F4LjXFFXTJmwuheWsc71ciMfAWaJWoScBHc1i5V/LeNpmhstYHJIHq+qMzf/EdOoxZwLZeSCNGf50HCN84O2qzOF3GbRTFDu8hyx95DNr7cZnjighP570QDsOZXr57YDMkhtcCn6ZYnORwD9o3Zuoe5muiu+O2Hz1Ngm54yK6Gk3JRMQhM4bHNbn7dUdNeUjeYYU4=" />
+									&nbsp;
+									<table class="frmDis" cellSpacing="0" cellPadding="0" width="100%" align="center" border="0">
+										<tbody>
+											<tr>
+												<td colSpan="3">
+													<table class="frmBaslik" cellSpacing="0" cellPadding="2" width="100%" border="0">
+														<tr>
+															<td>Şifre Hatırlatma İşlemleri</td>
+															<td></td>
+															<td align="right"></td>
+														</tr>
+													</table>
+													<input name="hdnKullaniciAdi" type="hidden" id="hdnKullaniciAdi" />
+													<input name="hdnDegistir" type="hidden" id="hdnDegistir" value="0" />
+												</td>
+											</tr>
+											<tr>
+												<td class="frmDisToolbar" colSpan="3" height="10"></td>
+											</tr>
+											
+											<tr>
+												<td height="10" class="auto-style20"></td>
+												<td width="95%" height="10"></td>
+												<td width="15" height="10"></td>
+											</tr>
+											<TR>
+												<TD height="10" class="auto-style20">
+												</TD>
+												<TD width="95%" height="10">
+													Sayın e-Okul Kullanıcısı,
+													<br>
+													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bu bölümü şifrenizi unuttuğunuzda kullanabilirsiniz. Şifrenizi tekrar belirlemek için aşağıda 
+                                                    gereken bilgileri doldurmanız gerekmektedir. Bilgiler doğru ise kullanıcınıza bağlı Cep Telefonunuza onay SMS gönderilecek ve yeni şifrenizi belirleyebileceğiniz bölüm açılacaktır.&nbsp;
+													<ul>
+														<li>Şifrenizin sadece numaralardan veya sadece harflerden oluşmamasına, harf, 
+														numara ve noktalama işaretlerini içermesine dikkat ediniz.
+                                                            </li>
+														</ul>
+												    <p>
+                                                        &nbsp;</p>
+												</TD>
+												<TD width="15" height="10"></TD>
+											</TR>
+											<TR>
+												<TD height="10" class="auto-style20"></TD>
+												<TD width="95%" style="text-align: center">
+                                                    <a id="HyperLink1" href="https://e-okul.meb.gov.tr">e-Okul Giriş Sayfasına Dönmek İçin Tıklayınız.</a>
+                                                </TD>
+												<TD width="15"></TD>
+											</TR>
+											<tr>
+												<td class="auto-style28" ></td>
+												<td align="center" style="vertical-align: top; height: 100%;">
+													<table id="TableSifre" class="frmListKucuk" cellspacing="1" cellpadding="1" border="0" style="width: 800px">
+	<tr>
+		<TD class="auto-style16"></TD>
+		<TD align="left" class="auto-style6"></TD>
+		<TD class="auto-style1"></TD>
+		<TD align="left" class="auto-style17">
+                                                                <span id="lblMesaj"><b><font color="Red"></font></b></span>
+                                                            </TD>
+		<TD class="auto-style14"></TD>
+	</tr>
+	<tr>
+		<TD height="5" class="auto-style13">&nbsp;</TD>
+		<TD align="right" height="5" class="auto-style2">&nbsp;</TD>
+		<TD height="5" class="auto-style1">&nbsp;</TD>
+		<TD align="left" height="5" class="auto-style18">
+                                                        <img id="image1" alt="" border="0" name="imgKontrol" src="guvenlikkod.aspx%EF%B9%96id=35.jpeg" height="40" width="100" />
+                                                            </TD>
+		<TD height="5">&nbsp;</TD>
+	</tr>
+	<tr>
+		<TD height="5" class="auto-style13">&nbsp;</TD>
+		<TD align="right" height="5" class="auto-style2">Güvenlik Kodu: </TD>
+		<TD height="5" class="auto-style1">&nbsp;</TD>
+		<TD align="left" height="5" class="auto-style18">
+                                                        <input name="txtGuvenlikKodu" type="text" maxlength="4" id="txtGuvenlikKodu" class="frmInput2" />
+                                                                &nbsp;&nbsp;
+                                                                &nbsp;
+&nbsp;&nbsp;
+                                                                
+<img src="images/giriskod.jpg"  onclick="ses();" alt="Rakamları Dinlemek İçin Tıklayınız..." tabIndex="4" onkeypress="return runScript(event)"/>
+<div id="sesler" style="visibility:hidden">
+<audio id='aPlayer' controls hidden>
+    <source src='common/sound.ogg' type='audio/ogg'> 
+    <source src='common/soundmp3.mp3' type='audio/mpeg'></audio>
+<script>
+    function ses() {
+        var aPlayer0 = document.getElementById('aPlayer');
+        aPlayer.load();
+        aPlayer.play();
+    }
+
+    function runScript(e) {
+        if (e.keyCode == 13) {
+            ses();
+            return false;
+        }
+    }
+</script>
+</div>
+                                                                &nbsp;
+                                                            </TD>
+		<TD height="5">&nbsp;</TD>
+	</tr>
+	<tr>
+		<TD height="5" class="auto-style13">&nbsp;</TD>
+		<TD align="right" height="5" class="auto-style2">Kullanıcı Adı:</TD>
+		<TD height="5" class="auto-style1">&nbsp;</TD>
+		<TD align="left" height="5" class="auto-style18">
+																<input name="txtKullaniciAdi" type="text" maxlength="20" id="txtKullaniciAdi" class="frmInput2" />
+                                                                &nbsp;
+                                                            </TD>
+		<TD height="5">&nbsp;</TD>
+	</tr>
+	<tr>
+		<td class="auto-style16"></td>
+		<td align="right" class="auto-style6">Cep Telefonu:
+															</td>
+		<td class="auto-style1"></td>
+		<td align="left" class="auto-style17">
+																<input name="txtCepTelefonu" type="number" maxlength="10" id="txtCepTelefonu" class="frmInput2" />
+                                                                &nbsp;
+                                                                (Başında sıfır olmadan)
+                                                                &nbsp;
+                                                            </td>
+		<td class="auto-style1"></td>
+	</tr>
+	<tr>
+		<td class="auto-style9"></td>
+		<td align="right" class="auto-style4">T.C. Kimlik No:</td>
+		<td></td>
+		<td align="left" class="auto-style19">
+																<input name="txtTCKimlikNo" type="number" maxlength="11" id="txtTCKimlikNo" class="frmInput2" />
+                                                                &nbsp;
+                                                                &nbsp;
+                                                            </td>
+		<td style="HEIGHT: 14px"></td>
+	</tr>
+	<tr>
+		<td class="auto-style13"></td>
+		<td align="right" class="auto-style2">Doğum Tarihi:
+															</td>
+		<td class="auto-style1"></td>
+		<td align="left" class="auto-style18">
+																<input name="txtDogumTarihi" type="text" maxlength="10" id="txtDogumTarihi" class="frmInput2" onkeyup="javascript:return tarihkontrol(this);" />
+                                                                &nbsp;
+                                                                (GG/AA/YYYY) 
+                                                                &nbsp;
+                                                            </td>
+		<td></td>
+	</tr>
+	<tr>
+		<td class="auto-style16"></td>
+		<td align="right" class="auto-style2">Yakın T.C. No:</td>
+		<td></td>
+		<td align="left" class="auto-style17">
+																<input name="txtYakinTCNo" type="number" maxlength="11" id="txtYakinTCNo" class="frmInput2" />
+                                                                &nbsp;
+                                                                (Aile Bireylerinden Biri)&nbsp;
+                                                            </td>
+		<td class="auto-style5"></td>
+	</tr>
+	<tr>
+		<TD class="auto-style34"></TD>
+		<TD class="auto-style35"></TD>
+		<TD class="auto-style33"></TD>
+		<TD align="left" class="auto-style36"></TD>
+		<TD class="auto-style33"></TD>
+	</tr>
+	<tr>
+		<td class="auto-style13"></td>
+		<td class="auto-style2">
+																<p align="left"></p>
+															</td>
+		<td class="auto-style1"></td>
+		<td align="left" class="auto-style18"><input type="submit" name="btnSorgula" value="Sorgula" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;btnSorgula&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="btnSorgula" class="submitButton" /></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td height="5" class="auto-style13"></td>
+		<td align="left" colspan="3" height="5"></td>
+		<td height="5"></td>
+	</tr>
+</table>
+
+                                                    
+
+                                                    
+												</td>
+												<td class="auto-style28"></td>
+											</tr>
+											<tr>
+												<td height="10" class="auto-style20"></td>
+												<td height="10">
+                                                    
+                                                </td>
+												<td height="10"></td>
+											</tr>
+										</tbody>
+									</table>
+									</form>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td vAlign="bottom" align="center" width="100%">
+					
+<LINK href="css/eokul.css" type="text/css" rel="stylesheet">
+<TABLE id="Table1" width="100%" border="0">
+	<TR>
+		<td align="center" class="bodytext">
+			Tüm hakları Milli Eğitim Bakanlığına aittir.
+		</td>
+		<!--<TD align="right" width="100%"><IMG src="../images/sonlandirici.jpg"></TD>-->
+	</TR>
+</TABLE>
+</td>
+			</tr>
+		</table>
+	</body>
+</HTML>
